@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animations</title>
+    <link rel="stylesheet" href="css/animations.css">
+  </head>
+  <body>
+    <h1>Animations of a Square</h1>
+
+    <!-- <input type="checkbox" id="buttoncontrol"></input>
+    <label class="box" for="buttoncontrol"><div id="box"></div></label> -->
+    <div id="box"></div>
+    <script type="text/javascript">
+      function animateBox() {
+        var target = document.getElementById('box');
+        var player = target.animate([
+          {transform: 'rotate(180deg)'},
+          {transform: 'rotate(-180deg)'}
+        ],5000);
+        };
+        var box = document.getElementById('box');
+        box.addEventListener('click', function() {
+            animateBox();
+        });
+    </script>
+
+    <section class="shipsection">
+      <img id="ship" src="images/ship.png" alt="Ship of serentiy">
+    </section>
+
+    <script type="text/javascript">
+      function animateShip() {
+        var target = document.querySelector('.shipsection');
+        var player = target.animate([
+          {transform: 'rotate(-45deg) translate(0)'},
+          {transform: 'translate(800px, -250px)'}
+        ], 2500);
+        player.addEventListener('finish', function() {
+          target.style.transform = 'translate(800px, -250px)';
+        });
+      }
+      var ship = document.querySelector('.shipsection');
+      ship.addEventListener('click', function() {
+          animateShip();
+      });
+    </script>
+
+    <footer>After I am done, click me and see what happens!</footer>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+body{
+  background: #aaff00;
+  color: black;
+  font-size: small;
+  font-family: "Comic Sans MS";
+}
+
+div{
+  position: relative;
+}
+
+div#box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  /* box-shadow: 0px 10px 20px; */
+  -webkit-animation-name: moving_square;
+  -webkit-animation-duration: 4s;
+  animation-name: moving_square;
+  animation-duration: 4s;
+  /* z-index: 1; */
+}
+
+/*Safari*/
+@-webkit-keyframes moving_square{
+  0%{background-color: red; left: 0px; top: 0px;}
+  25%{background-color: yellow; left: 200px; top: 0px;}
+  50%{background-color: blue; left: 200px; top: 200px;}
+  75%{background-color: green; left: 0px; top: 200px;}
+  100%{background-color: red; left: 0px; top: 0px;}
+}
+
+/*Chrome*/
+@keyframes moving_square{
+  0%{background-color: red; left: 0px; top: 0px;}
+  25%{background-color: yellow; left: 200px; top: 0px;}
+  50%{background-color: blue; left: 200px; top: 200px;}
+  75%{background-color: green; left: 0px; top: 200px;}
+  100%{background-color: red; left: 0px; top: 0px;}
+}
+
+/* #buttoncontrol{
+  display: none;
+}
+
+#buttoncontrol:checked + label > div{
+  animation-name: checked;
+  animation-duration: 4s;
+  transition: transform 4s;
+  transform: rotate(360deg);
+}
+
+@keyframes checked{
+  0%{background-color: red; left: 0px; top: 0px;}
+  25%{background-color: yellow; left: 200px; top: 0px;}
+  50%{background-color: blue; left: 200px; top: 200px;}
+  75%{background-color: green; left: 0px; top: 200px;}
+  100%{background-color: red; left: 0px; top: 0px;}
+} */
+
+/* call it "#ship" */
+.shipsection img#ship{
+  z-index: 4;
+  /* -webkit-animation: moving_ship 5s;
+  animation: click_ship 5s; */
+}
+
+/* @keyframes click_ship {
+  from{transform: rotate(-45deg) translate(0, 0);}
+  to{transform: translate(800px, -300px);}
+} */
+
+footer{
+  margin-top: 200px;
+}
