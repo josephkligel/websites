@@ -1,0 +1,120 @@
+body{
+  color: white;
+  font-size: small;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: black url("../images/background1.jpg");
+}
+
+body#home{
+  background: url("../images/background2.jpg")
+}
+
+header.top{
+  margin: 10px;
+  height: 250px;
+}
+
+div.more{
+  /* position: relative; */
+  float: right;
+  margin-top: 150px;
+  margin-right: 5%;
+}
+
+button.dropbutton{
+  background: url("../images/dropicon.jpg");
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+div.dropcontent{
+  background-color: #f1f1f1;
+  min-width: 10%;
+  position: absolute;
+  display: none;
+}
+
+div.dropcontent a{
+  color: black;
+  font-size: 120%;
+  display: block;
+  text-decoration: none;
+}
+
+a:hover{
+  background-color: "red";
+}
+
+div.more:hover .dropcontent{
+  display: block;
+}
+
+h1{
+  font-size:200%;
+  color: silver;
+}
+
+.selected{
+  background-color: blue;
+}
+
+p#intro{
+  line-height: 200%;
+  margin: 0px 0px 10px 10px;
+  width: 50%;
+}
+
+section#trailersection{
+  text-align: center;
+}
+
+span.shows{
+  color: #ff0a0a;
+  font-style: italic;
+}
+
+section.episode{
+  text-align: center;
+  padding: 25px;
+}
+
+#ship{
+  position: relative;
+  margin-left: 20px;
+  margin-top: 200px;
+  z-index: 1;
+  -webkit-animation: moving_ship 5s;
+  animation: moving_ship 5s;
+}
+
+@keyframes moving_ship{
+  from{transform: rotate(-45deg); margin-top: 200px; margin-left: 20px;}
+  to{margin-top: -500px; margin-left: 800px;}
+}
+
+@-webkit-keyframes moving_ship{
+  from{-webkit-transform: rotate(-45deg); margin-top: 200px; margin-left: 20px;}
+  to{margin-top: -500px; margin-left: 800px;}
+}
+
+
+footer{
+  display: table;
+  background-color: none;
+  color: white;
+  font-weight: bold;
+  font-size: 90%;
+  margin: 10px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+footer#homefooter{
+  color: #d76c3e;
+}
