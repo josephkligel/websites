@@ -8,5 +8,17 @@
   <body id="ukbs_body">
     <h1>Ubuntu Keyboard Shortcuts</h1>
     <p id="ukbs_img"><img id="ubuntu_kb_shortcuts" src="images/keyboard_shortcuts.jpg" alt="Large picture of Keyboard shortcuts"></p>
+    <script>
+      var count = 0;
+      var image = document.getElementById('ubuntu_kb_shortcuts');
+      image.onclick = function(e){
+        count++;
+        if(count % 2 == 0){
+          image.src = "images/keyboard_shortcuts.jpg";
+        } else if (count % 2 == 1) {
+          image.src = "images/keyboardthumbnail.jpg";
+        }
+      }
+    </script>
   </body>
 </html>
